@@ -9,6 +9,7 @@ app.use(express.urlencoded({
 }));
 const userRoute=require('./src/route/users/users.route');
 const themesRoute = require('./src/route/themes/themes.route');
+const themes_propertiesRoute = require('./src/route/themes/themes_properties.route');
 const topicsRoute = require('./src/route/topics/topics.route');
 
 
@@ -25,5 +26,6 @@ app.get('/pagina2', function (req, res) {
 //llamadas a los routes de los UCs
 userRoute(app);
 themesRoute(app);
+themes_propertiesRoute(app);
 topicsRoute(app);
 app.listen(3000);
