@@ -66,7 +66,7 @@ const actualizar = async function(id, create_date, name, description, keywords, 
     }
 };
 
-const eliminar = async function(re,res) {
+const eliminar = async function(req,res) {
     console.log("eliminar tema ");
     try{
         await ThemeModel.destroy({where: {id:codigo }},{truncate:false});

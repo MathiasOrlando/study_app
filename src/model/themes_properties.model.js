@@ -1,8 +1,11 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require("../connection");
 
-const ThemeModel = sequelize.define('Theme',{
-    id: {type:DataTypes.INTEGER,allowNull: false, primaryKey: true, autoIncrement: true,},
+const Theme_PropertiesModel = sequelize.define('Theme_Properties',{
+    id: {
+        type:DataTypes.INTEGER,
+        allowNull: false, primaryKey: true, autoIncrement: true,
+    },
     create_date: { type: DataTypes.DATE, allowNull: true },
     name: { type: DataTypes.STRING, allowNull: true },
     description: { type: DataTypes.STRING, allowNull: true },
@@ -10,10 +13,10 @@ const ThemeModel = sequelize.define('Theme',{
     owner_user_id: { type: DataTypes.INTEGER, allowNull: false },
     
 }, {
-    tableName: 'themes',
+    tableName: 'themes_Properties',
     timestamps: false
 });
 
 module.exports = {
-    ThemeModel
+    Theme_PropertiesModel
 };
